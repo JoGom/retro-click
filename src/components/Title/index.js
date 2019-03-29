@@ -4,8 +4,8 @@ import "./style.css";
 const Title = () => 
 <div className="jumbotron jumbotron-fluid">
   <div className="container" id = "heroSect">
-    <h1 >Fluid jumbotron</h1>
-    <p >This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <h1 >Click on an image to earn points, but don't click on any more than once.</h1>
+    <h1>Click an image below to begin.</h1>
   </div>
 </div>
 

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "/images/blackmage.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image": "/images/clyde.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image": "/images/bowser.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "image": "/images/kirby.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "image": "/images/kong.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "image": "/images/link.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "image": "/images/mario.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "image": "/images/megaman.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "image": "/images/pacman.png",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "image": "/images/pika.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "image": "/images/sonic.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "image": "/images/yoshi.png",
+    "clicked": false
+  }
+]

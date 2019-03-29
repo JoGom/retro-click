@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import ImageCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
-import Nav from "./components/Nav"
+import friends from "./characters.json";
+import Nav from "./components/Nav";
+import CardWrapper from "./components/CardWrapper";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -24,17 +25,19 @@ class App extends Component {
       <Wrapper>
         <Nav />
         <Title />
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
-        ))}
+        <CardWrapper>
+          {this.state.friends.map(friend => (
+            <ImageCard
+              removeFriend={this.removeFriend}
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+              occupation={friend.occupation}
+              location={friend.location}
+            />
+          ))}
+        </CardWrapper>
       </Wrapper>
     );
   }
