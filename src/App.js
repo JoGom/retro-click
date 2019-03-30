@@ -46,7 +46,7 @@ class App extends Component {
         //changes the clicked character's status to true
         if(character.id === id){
           character.clicked = true;
-          this.state.score ++;
+          this.setState({score: this.state.score + 1});
         }
         newArr.push(character)
       });
@@ -54,8 +54,22 @@ class App extends Component {
       //replace state character array with the updated one and shuffle it 
       this.setState({characters: this.shuffleCharacters(newArr)}); 
     }
+    //if the character has already been clicked then do this
     else if(clicked === true){
-      
+      const newArr2 =[];
+      this.state.characters.forEach( (character) => {
+        //changes all the clicked statuses back to false
+        character.clicked = false;
+        newArr2.push(character)
+      });
+      this.setState({characters: newArr2});
+      //sets the new highscore if there is one
+      if(this.state.score > this.state.highscore){
+        this.setState({highscore: this.state.score});
+      }
+      //resets score
+      this.setState({score: 0});
+
     }
     
   }
