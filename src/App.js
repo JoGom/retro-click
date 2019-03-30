@@ -9,10 +9,14 @@ import CardWrapper from "./components/CardWrapper";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    characters
+    characters,
+    score: 0,
+    highscore: 0
   };
 
-  componentDidMount() {
+  //react lifecycle function that runs ater a component is mounted
+  componentDidMount = () => {
+    //sets the state to the new array that has a random order
     this.setState({characters: this.shuffleCharacters(this.state.characters)});
   }
 
@@ -29,8 +33,31 @@ class App extends Component {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    //returns the shuffled array
+    //returns the shuffled array, What gets assigned to state
     return array;
+  }
+
+  clickImage = (id, clicked) => {
+    //if the character has yet to be clicked change the clicked status of that character to true
+    if(clicked === false){
+      //empty array that will reaplace state array with updated array
+      const newArr =[];
+      this.state.characters.forEach( (character) => {
+        //changes the clicked character's status to true
+        if(character.id === id){
+          character.clicked = true;
+          this.state.score ++;
+        }
+        newArr.push(character)
+      });
+      console.log(newArr);
+      //replace state character array with the updated one and shuffle it 
+      this.setState({characters: this.shuffleCharacters(newArr)}); 
+    }
+    else if(clicked === true){
+      
+    }
+    
   }
 
 
@@ -45,7 +72,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Nav />
+        <Nav 
+          score={this.state.score}
+          highscore={this.state.highscore}
+        />
         <Title />
         <CardWrapper>
           {this.state.characters.map(character => (
@@ -53,6 +83,8 @@ class App extends Component {
               // removeFriend={this.removeFriend}
               id={character.id}
               key={character.id}
+              clicked={character.clicked}
+              clickImage={this.clickImage}
               // name={character.name}
               image={character.image}
               // occupation={character.occupation}

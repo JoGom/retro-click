@@ -3,7 +3,7 @@ import "./style.css";
 
 function ImageCard(props) {
   return (
-    <div className="card" id="card">
+    <div onClick={() => props.clickImage(props.id, props.clicked)} className="card" data-id={props.clicked} id="card">
       <img  src={props.image} />
     </div>
   );
