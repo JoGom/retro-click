@@ -12,15 +12,15 @@ self.__precacheManifest = [
     "url": "/retro-click/static/js/runtime~main.a068ae3e.js"
   },
   {
-    "revision": "d2faa38c5867d817cbd9",
-    "url": "/retro-click/static/js/main.1455b9f3.chunk.js"
+    "revision": "12daba837e7d7411aa6b",
+    "url": "/retro-click/static/js/main.9e59f6ed.chunk.js"
   },
   {
     "revision": "28b2623acff332ede207",
     "url": "/retro-click/static/js/2.0e8364b2.chunk.js"
   },
   {
-    "revision": "d2faa38c5867d817cbd9",
+    "revision": "12daba837e7d7411aa6b",
     "url": "/retro-click/static/css/main.6364f353.chunk.css"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/retro-click/static/css/2.097a27bf.chunk.css"
   },
   {
-    "revision": "af9354d1e9cf842f12e0ca1bf703a178",
+    "revision": "2a07c2ee6bc7e85c2ef6492e7f7a2d94",
     "url": "/retro-click/index.html"
   }
 ];
