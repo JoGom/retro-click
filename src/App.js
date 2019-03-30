@@ -12,6 +12,28 @@ class App extends Component {
     characters
   };
 
+  componentDidMount() {
+    this.setState({characters: this.shuffleCharacters(this.state.characters)});
+  }
+
+  //function to shuffle the characters array
+  shuffleCharacters = array => {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    //returns the shuffled array
+    return array;
+  }
+
+
   // removeFriend = id => {
   //   // Filter this.state.friends for friends with an id not equal to the id being removed
   //   const friends = this.state.friends.filter(friend => friend.id !== id);
